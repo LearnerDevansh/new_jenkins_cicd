@@ -10,14 +10,6 @@ COPY app.py requirements.txt /flaskapp/
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Install Docker CLI inside the container
-RUN apt-get update && \
-    apt-get install -y curl && \
-    curl -fsSL https://get.docker.com -o install-docker.sh && \
-    sh install-docker.sh && \
-    rm install-docker.sh && \
-    apt-get clean
-
 # Expose port 5000 (Flask default)
 EXPOSE 5000
 
