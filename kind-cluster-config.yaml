@@ -3,4 +3,4 @@ apiVersion: kind.x-k8s.io/v1alpha4
 containerdConfigPatches:
 - |-
     [plugins."io.containerd.grpc.v1.cri".registry.mirrors."localhost:5000"]
-      endpoint = ["http://172.31.82.109:5000"]
+      endpoint = ["http://3.93.179.216:5000"]
